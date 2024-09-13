@@ -36,15 +36,15 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Je opdracht:
-  https://froukje.net
-  
+  https://www.kilokilovintage.nl 
+
   #### Screenshot(s) van de eerste pagina (small screen): 
-  home pagina Froukje.net
-  <img src="readme-images/homeFroukje.PNG" width="375px" alt="home pagina, met in het midden knoppen naar websites die haar tickets verkopen en in elke hoek ook een knop (navigatie) naar haar merch, over haarzelf en tickets">
+  home pagina kilo kilo 
+  <img src="readme-images/kilokiloHome.png" width="375px" alt="homepagina kilokilo winkel, met daarop weergeven een afbeelding met de tekst heavyweights in vintage">
 
   #### Screenshot(s) van de tweede pagina (small screen):
   Ticket pagina Froukje.net  
-  <img src="readme-images/ticketsFroukje.PNG" width="375px" alt="een lijst met optredens met informatie over waar ze zijn en knoppen om de tickets te bestellen. ">
+  <img src="readme-images/kilokiloWinkels.jpg" width="375px" alt="pagina waarop meer informatie staat over de verschillende winkels die ze hebben en waar deze zich bevinden ">
  
 </details>
 

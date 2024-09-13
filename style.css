@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+}
+
+
+header p {
+    display: grid;
+    grid-template-columns: 2fr;
+    grid-template-rows: 0.5fr 0.5fr ;
+    padding-top: 0.7em;
+
+
+    font-family: "Gothic A1", sans-serif;
+    font-weight: 300;
+    letter-spacing: -0.03em;
+    text-align: center;
+
+    font-size: 1em;
+    background-color: black;
+    color: white;
+}
+
+header nav {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    height: 10lvh;
+
+}
+
+header ul {
+    list-style-type: none;
+    margin-left: -2.5em;
+
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr 1fr;
+    grid-template-rows: 0.2fr 0.2fr ;
+   
+    background-color: #F7B100;
+}
+header li :nth-child(1) {
+    width: 120%;
+    padding-top: 0.8em;
+    padding-left: 1em;
+   
+}
+
+
+.headerBanner{
+    background-image: url(https://www.kilokilovintage.nl/wp-content/uploads/2020/11/Header-team-tiny-scaled.jpg);
+    background-size: cover;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 8em;
+    
+}
+
+.headerBanner h1 {
+    font-family: "Gothic A1", sans-serif;
+    font-weight: 900;
+    line-height: 1.4;
+    text-align: center;
+    font-size: 2em;
+
+    color: white;
+
+}  
+
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+.kop1Home h2 {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+.kop1Home {
+    background-color: #F7F7F7;
+    padding: 2em;
+
+    padding-bottom: 6em;
+    padding-top: 5em;
+    
+}
+ .kop1Home p {
+    font-family: "Gothic A1", sans-serif;
+    font-weight: 200;
+    text-align: center;
+    line-height: 1.5;
+    
+    margin-bottom: 1em;
+
+    
+    font-size: 1.3em;
+    background-color: #F7F7F7;
+}
+
+.kop1Home a {
+    font-family: "Gothic A1", sans-serif;
+    font-weight: 900;
+    font-size: 1.3em;
+
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+}
+
+.kop2Home h2 {
+    font-family: "Gothic A1", sans-serif;
+    font-weight: 900; 
+
+    margin-top: 1em;
+    margin-left: 1em;
+
+}
+
+.kop2Home img {
+    max-width: 20%;
+    margin-left: 1.5em;
+    margin-top: 3em;
+}
+
