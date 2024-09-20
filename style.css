@@ -1,5 +1,6 @@
 * {
     margin: 0;
+   font-family: "Gothic A1", sans-serif;
 }
 
 
@@ -10,7 +11,7 @@ header p {
     padding-top: 0.7em;
 
 
-    font-family: "Gothic A1", sans-serif;
+    
     font-weight: 300;
     letter-spacing: -0.03em;
     text-align: center;
@@ -60,15 +61,16 @@ header li :nth-child(1) {
 }
 
 .headerBanner h1 {
-    font-family: "Gothic A1", sans-serif;
     font-weight: 900;
     line-height: 1.4;
     text-align: center;
     font-size: 2em;
+    margin: 1.3em;
 
     color: white;
 
 }  
+
 
 /* https://www.a11yproject.com/posts/how-to-hide-content/ */
 .kop1Home h2 {
@@ -90,7 +92,6 @@ header li :nth-child(1) {
     
 }
  .kop1Home p {
-    font-family: "Gothic A1", sans-serif;
     font-weight: 200;
     text-align: center;
     line-height: 1.5;
@@ -103,7 +104,6 @@ header li :nth-child(1) {
 }
 
 .kop1Home a {
-    font-family: "Gothic A1", sans-serif;
     font-weight: 900;
     font-size: 1.3em;
 
@@ -114,17 +114,614 @@ header li :nth-child(1) {
 }
 
 .kop2Home h2 {
-    font-family: "Gothic A1", sans-serif;
     font-weight: 900; 
+    font-size: 2em;
 
     margin-top: 1em;
-    margin-left: 1em;
+    margin-left: 1.3em;
 
 }
 
 .kop2Home img {
     max-width: 20%;
-    margin-left: 1.5em;
+    margin-left: 2em;
     margin-top: 3em;
+}
+
+.kop3Home h2 {
+    margin-top: 3em;
+    margin-left: 1.3em;
+    font-weight: 900;
+    font-size: 2em;
+}
+
+.kop3Home a {
+    display: flex;
+    justify-content: center;
+    margin-top: 3em;
+    margin-left: 7em;
+    margin-right: 7em;
+    margin-bottom: 3em;
+    padding: 0.5em;
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+
+    background-color: #F7B100;
+    text-decoration: none;
+    font-weight: 900;
+    color: black;
+    
+
+    
+}
+
+.kop4Events {
+    background-color: #F7F7F7;
+    padding-bottom: 3em;
+
+}
+
+.kop4Events h2 {
+    font-weight: 900;
+    font-size: 2em;
+    padding-top: 1.5em;
+    
+    display: flex;
+    justify-content: center;
+}
+
+.kop4Events p {
+    display: flex;
+    justify-content: center;
+
+    font-weight: 100;
+    text-align: center;
+    font-size: 1.5em;
+    margin: 1.3em;
+}
+
+.kop4Events a {
+    display: flex;
+    justify-content: center;
+    margin-top: 4em;
+    margin-left: 7em;
+    margin-right: 7em;
+    margin-bottom: 1em;
+    padding: 0.5em;
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+
+    background-color: #F7B100;
+    text-decoration: none;
+    font-weight: 900;
+    color: black;
+}
+
+.kopWinkels h2 {
+    font-weight: 900;
+    font-size: 2em;
+    padding-top: 1.5em;
+    
+    display: flex;
+    justify-content: center;
+}
+
+.kopWinkels p:nth-of-type(1) {
+    display: flex;
+    justify-content: center;
+
+    font-weight: 100;
+    text-align: center;
+    font-size: 1.5em;
+    margin: 1.3em;
+}
+
+.kopWinkels p:nth-of-type(2) {
+    display: flex;
+    justify-content: center;
+
+    font-weight: 100;
+    text-align: center;
+    font-size: 1.5em;
+    margin: 1.3em;
+}
+
+.nijmegenWinkel {
+    background-color: #CEC5F1;
+    margin: 1.8em;
+    display: grid;
+    gap: 2em;
+  
+    
+}
+
+.nijmegenWinkel img {
+    max-width: 100%;
+}
+
+
+.nijmegenWinkel p {
+    font-weight: 300;
+    font-size: 1.4em;
+    margin-left: 1em;
+    margin-bottom: -1em;
+    margin-top: -0.3em;
+
+}
+
+.nijmegenWinkel h3 {
+    font-weight: 900;
+    font-size: 1.5em;
+    word-spacing: -0.1em;
+    margin-left: 1em;
+    margin-bottom: -0.5em;
+}
+
+.nijmegenWinkel a {
+    margin-left: 1.8em;
+    margin-right: 18em;
+    margin-bottom: 1em;
+    
+    padding: 1.5em;
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+
+    background-color: black;
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 0.8em;
+    color: white;
+}
+
+.denhaagWinkel {
+    background-color: #31F869;
+    margin: 1.8em;
+    display: grid;
+    gap: 2em; 
+}
+
+.denhaagWinkel img {
+    max-width: 100%;
+}
+
+.denhaagWinkel p {
+    font-weight: 300;
+    font-size: 1.4em;
+    margin-left: 1em;
+    margin-bottom: -1em;
+    margin-top: -0.3em;
+}
+
+.denhaagWinkel h3 {
+    font-weight: 900;
+    font-size: 1.5em;
+    word-spacing: -0.1em;
+    margin-left: 1em;
+    margin-bottom: -0.5em;
+}
+
+.denhaagWinkel a {
+    margin-left: 1.8em;
+    margin-right: 18em;
+    margin-bottom: 1em;
+    
+    padding: 1.5em;
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+
+    background-color: black;
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 0.8em;
+    color: white;
+}
+
+.utrechtWinkel {
+    background-color: #E8D86A;
+    margin: 1.8em;
+    display: grid;
+    gap: 2em; 
+}
+
+.utrechtWinkel img {
+    max-width: 100%;
+}
+
+.utrechtWinkel p {
+    font-weight: 300;
+    font-size: 1.4em;
+    margin-left: 1em;
+    margin-bottom: -1em;
+    margin-top: -0.3em;
+}
+
+.utrechtWinkel h3 {
+    font-weight: 900;
+    font-size: 1.5em;
+    word-spacing: -0.1em;
+    margin-left: 1em;
+    margin-bottom: -0.5em; 
+}
+
+.utrechtWinkel a {
+    margin-left: 1.8em;
+    margin-right: 18em;
+    margin-bottom: 1em;
+    
+    padding: 1.5em;
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+
+    background-color: black;
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 0.8em;
+    color: white;
+}
+
+.tilburgWinkel{
+    background-color: #F9E7F0;
+    margin: 1.8em;
+    display: grid;
+    gap: 2em;   
+}
+
+.tilburgWinkel img {
+    max-width: 100%;
+}
+
+.tilburgWinkel p {
+    font-weight: 300;
+    font-size: 1.4em;
+    margin-left: 1em;
+    margin-bottom: -1em;
+    margin-top: -0.3em;
+}
+
+.tilburgWinkel h3 {
+    font-weight: 900;
+    font-size: 1.5em;
+    word-spacing: -0.1em;
+    margin-left: 1em;
+    margin-bottom: -0.5em; 
+}
+
+.tilburgWinkel a {
+    margin-left: 1.8em;
+    margin-right: 18em;
+    margin-bottom: 1em;
+    
+    padding: 1.5em;
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+
+    background-color: black;
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 0.8em;
+    color: white;
+}
+
+.bredaWinkel {
+    background-color: #B0FEE6;
+    margin: 1.8em;
+    display: grid;
+    gap: 2em;  
+}
+
+.bredaWinkel img {
+    max-width: 100%;
+}
+
+.bredaWinkel p {
+    font-weight: 300;
+    font-size: 1.4em;
+    margin-left: 1em;
+    margin-bottom: -1em;
+    margin-top: -0.3em;
+}
+
+.bredaWinkel h3 {
+    font-weight: 900;
+    font-size: 1.5em;
+    word-spacing: -0.1em;
+    margin-left: 1em;
+    margin-bottom: -0.5em; 
+}
+
+.bredaWinkel a {
+    margin-left: 1.8em;
+    margin-right: 18em;
+    margin-bottom: 1em;
+    
+    padding: 1.5em;
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+
+    background-color: black;
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 0.8em;
+    color: white;
+}
+
+
+
+.alleWinkels {
+    color: black;
+    background-color: #F7B100;
+    text-decoration: none;
+    padding: 0.9em;
+    font-weight: 900;
+    font-size: 0.8em ;
+
+    display: flex;
+    justify-content: center;
+    margin-left: 9em;
+    margin-right: 9em;
+    margin-top: 4em;
+    margin-bottom: 9em;
+
+}
+
+.formulier{
+    background-color: #F7F7F7;
+}
+
+.formulier h2 {
+    font-weight: 900;
+    font-size: 2em;
+    word-spacing: -0.1em;
+    margin-left: 1.3em;
+    margin-right: 1.3em;
+    padding-top: 3em;
+    text-align: center;
+   
+}
+
+.formulier p {
+    font-weight: 300;
+    font-size: 1.2em;
+    text-align: center;
+    margin: 1.8em;
+    word-spacing: -0.06em;
+}
+
+form {
+    display: grid;
+    background-color: black;
+    padding-top: 1.5em;
+    padding-bottom: 2em;
+    padding-left: 2em;
+    padding-right: 2em;
+    margin-left: 1.8em;
+    margin-right: 1.8em;
+    margin-bottom: 8em;
+    margin-top: 3em;
+    gap: 1em;
+}
+
+input {
+    padding-left: 1em;
+    padding-right: 6em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    
+    font-weight: 300;
+}
+
+input::placeholder {
+    color: black;
+}
+
+
+
+form button {
+    color: black;
+    background-color: #F7B100;
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 1em ;
+
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    border-style: none;
+}
+
+
+
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+label {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+footer {
+    background-color: #F7B100;
+}
+
+footer h4 {
+font-weight: 900;
+font-size: 1.4em;
+margin-left: 1.3em;
+padding-top: 2em;
+}
+
+footer p {
+    font-weight: 100;
+    margin-left: 1.8em;
+    margin-top: 0.5em;
+    margin-right: 1.3em;
+}
+
+.socialLogo img {
+    max-width: 6%;
+    padding: 0.3em;
+    margin-top: 0;
+    margin-left: 0;
+    margin-bottom: 1.5em;
+}
+
+.socialLogo img:nth-of-type(1){
+    margin-left: 1.6em;
+    margin-top: 0.5em;
+}
+
+footer a {
+  text-decoration: none;
+  color: black;
+
+  display: grid;
+  font-weight: 100;
+  margin-left: -0.5em;
+  margin-top: 0.5em;
+}
+
+.betaalLogo img {
+    max-width: 12%;
+    padding: 0.2em;
+    margin-top: 0;
+    margin-left: 0;
+    margin-bottom: 0;
+}
+
+.betaalLogo img:nth-of-type(1){
+    margin-left: 1.9em;
+    margin-top: 0.5em;
+}
+
+.betaalLogo img:nth-of-type(3){
+    padding-bottom: 1.3em;
+}
+
+
+footer img {
+    max-width: 40%;
+    margin-left: 1.9em;
+    margin-top: 4em;
+    margin-bottom: 4.5em;
+}
+
+footer p:nth-of-type(5){
+    background-color: black;
+    color: white;
+    font-size: 0.6em;
+    margin: 0;
+
+    display: flex;
+    justify-content: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.introWinkels h1 {
+    color: black;
+    margin-top: 7em;
+    font-weight: 900;
+    font-size: 1.8em;
+    display: flex;
+    justify-content: center;
+}
+
+.introWinkels p {
+    font-weight: 100;
+    font-size: 1.4em;
+    text-align: center;
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+}
+
+.introWinkels p:nth-of-type(1){
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
+
+.introWinkels p:nth-of-type(2){
+    margin-bottom: 5em;
+}
+
+.eventButton p {
+    font-weight: 300;
+    font-size: 1.2em;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-left: 2em;
+    margin-right: 2em;
+    margin-top: 8em;
+    margin-bottom: 1em;
+}
+
+.eventButton a {
+    color: black;
+    background-color: #F7B100;
+    text-decoration: none;
+    padding: 0.9em;
+    font-weight: 900;
+    font-size: 0.8em ;
+
+    display: flex;
+    justify-content: center;
+    margin-left: 9em;
+    margin-right: 9em;
+    margin-bottom: 12em; 
+}
+
+.meerdanVintage h2 {
+    font-weight: 900;
+    font-size: 1.8em;
+    display: flex;
+    justify-content: center;
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+    text-align: center;
+}
+
+.meerdanVintage p {
+    text-align: center;
+    font-weight: 100;
+    font-size: 1.5em;
+    margin-left: 1.5em;
+    margin-right: 1em;
+    margin-top: 1.5em;
+    margin-bottom: 7em;
+}
+
+.meerdanVintage a {
+    color: black;
+    background-color: #F7B100;
+    text-decoration: none;
+    padding: 0.9em;
+    font-weight: 900;
+    font-size: 0.8em ;
+
+    display: flex;
+    justify-content: center;
+    margin-left: 11em;
+    margin-right: 11em;
+    margin-bottom: 2em;
+}
+
+.meerdanVintage a:nth-of-type(4){
+    color: black;
+    background-color: #F7B100;
+    text-decoration: none;
+    padding: 0.9em;
+    font-weight: 900;
+    font-size: 0.8em ;
+
+    display: flex;
+    justify-content: center;
+    margin-left: 12em;
+    margin-right: 12em;
+    margin-bottom: 12em;
 }
 
