@@ -1,20 +1,75 @@
 * {
     margin: 0;
-   font-family: "Gothic A1", sans-serif;
+    font-family: "Gothic A1", sans-serif;
+}
+
+p {
+    font-weight: 100;
+    font-size: 1.3em;
+    margin-left: 1.3em;
+    margin-right: 1.3em;
+    text-align: center;
+
+}
+
+img {
+    max-width: 100%;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 900;
+    font-size: 2em;
+    text-align: center;
+}
+
+
+a {
+    color: black;
+    background-color: #F7B100;
+    text-decoration: none;
+    padding: 0.9em;
+    font-weight: 900;
+    font-size: 0.8em;
+
+
+    display: flex;
+    justify-content: center;
+
+}
+
+a img {
+    max-width: 1em;
+    padding-left: 0.8em;
+
+
+}
+
+section a img {
+    width: 10%;
+}
+
+section a {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
 }
 
 
 header p {
     display: grid;
     grid-template-columns: 2fr;
-    grid-template-rows: 0.5fr 0.5fr ;
+    grid-template-rows: 0.5fr 0.5fr;
     padding-top: 0.7em;
 
 
-    
+
     font-weight: 300;
     letter-spacing: -0.03em;
     text-align: center;
+    margin-left: 0;
+    margin-right: 0;
 
     font-size: 1em;
     background-color: black;
@@ -36,40 +91,52 @@ header ul {
 
     display: grid;
     grid-template-columns: 1fr 3fr 1fr 1fr;
-    grid-template-rows: 0.2fr 0.2fr ;
-   
+    grid-template-rows: 0.2fr 0.2fr;
+
     background-color: #F7B100;
 }
+
 header li :nth-child(1) {
-    width: 120%;
-    padding-top: 0.8em;
+    max-width: 6.5em;
     padding-left: 1em;
-   
+    padding-bottom: 0;
+
 }
 
 
-.headerBanner{
+.headerBanner {
     background-image: url(https://www.kilokilovintage.nl/wp-content/uploads/2020/11/Header-team-tiny-scaled.jpg);
     background-size: cover;
-    height: 30vh;
+    height: 28vh;
+
     display: flex;
     justify-content: center;
     align-items: center;
 
     margin-top: 8em;
-    
+
 }
 
 .headerBanner h1 {
-    font-weight: 900;
     line-height: 1.4;
-    text-align: center;
-    font-size: 2em;
     margin: 1.3em;
-
     color: white;
 
-}  
+}
+
+.carousel {
+    display: flex;
+    align-items: center;
+    overflow: auto;
+
+}
+
+.carousel img {
+    width: 9em;
+    padding: 1.5em;
+    padding-bottom: 1em;
+    padding-top: 1em;
+}
 
 
 /* https://www.a11yproject.com/posts/how-to-hide-content/ */
@@ -85,74 +152,91 @@ header li :nth-child(1) {
 
 .kop1Home {
     background-color: #F7F7F7;
-    padding: 2em;
+    padding-left: 1.3em;
+    padding-right: 1.3em;
 
     padding-bottom: 6em;
     padding-top: 5em;
-    
-}
- .kop1Home p {
-    font-weight: 200;
-    text-align: center;
-    line-height: 1.5;
-    
-    margin-bottom: 1em;
 
-    
+}
+
+.kop1Home p {
+    line-height: 1.5;
+    margin-bottom: 1em;
     font-size: 1.3em;
     background-color: #F7F7F7;
 }
 
 .kop1Home a {
-    font-weight: 900;
     font-size: 1.3em;
-
     display: flex;
     justify-content: center;
     text-decoration: none;
     color: black;
+    background-color: #F7F7F7;
 }
 
 .kop2Home h2 {
-    font-weight: 900; 
-    font-size: 2em;
-
     margin-top: 1em;
     margin-left: 1.3em;
+    text-align: left;
 
 }
 
-.kop2Home img {
+/* .kop2Home img {
+    display: grid;
+
     max-width: 20%;
     margin-left: 2em;
     margin-top: 3em;
-}
+    padding: 0;
+} */
 
 .kop3Home h2 {
     margin-top: 3em;
     margin-left: 1.3em;
-    font-weight: 900;
-    font-size: 2em;
+    font-size: 1.8em;
+    text-align: left;
+    margin-bottom: 2em;
+}
+
+.kop3Home {
+    margin-bottom: 2em;
 }
 
 .kop3Home a {
-    color: black;
-    background-color: #F7B100;
-    text-decoration: none;
-    padding: 0.9em;
-    font-weight: 900;
-    font-size: 0.8em ;
-
-    display: flex;
-    justify-content: center;
-    margin-left: 9em;
-    margin-right: 9em;
-    margin-top: 4em;
-    margin-bottom: 9em;
-    
-
-    
+    margin-left: 8em;
+    margin-right: 8em;
 }
+
+.hidden {
+    opacity: 0;
+}
+
+
+.kop3Home img:nth-of-type(1) {
+    max-width: 23em;
+    display: flex;
+
+}
+
+.kop3Home img:nth-of-type(2) {
+    max-width: 23em;
+    margin-top: -23em;
+}
+
+.kop3Home img:nth-of-type(1),
+.kop3Home img:nth-of-type(2) {
+    opacity: 0;
+    transition: .5s ease;
+}
+
+.kop3Home img:nth-of-type(1),
+.kop3Home img:nth-of-type(2) :hover {
+    opacity: 1;
+
+}
+
 
 .kop4Events {
     background-color: #F7F7F7;
@@ -161,10 +245,8 @@ header li :nth-child(1) {
 }
 
 .kop4Events h2 {
-    font-weight: 900;
-    font-size: 2em;
     padding-top: 1.5em;
-    
+
     display: flex;
     justify-content: center;
 }
@@ -172,56 +254,77 @@ header li :nth-child(1) {
 .kop4Events p {
     display: flex;
     justify-content: center;
-
-    font-weight: 100;
-    text-align: center;
     font-size: 1.5em;
     margin: 1.3em;
 }
 
 .kop4Events a {
-    color: black;
-    background-color: #F7B100;
-    text-decoration: none;
-    padding: 0.9em;
-    font-weight: 900;
-    font-size: 0.8em ;
-
-    display: flex;
-    justify-content: center;
     margin-left: 9em;
     margin-right: 9em;
     margin-top: 4em;
     margin-bottom: 9em;
 }
 
+
 .kopWinkels h2 {
-    font-weight: 900;
-    font-size: 2em;
     padding-top: 1.5em;
-    
+
     display: flex;
     justify-content: center;
 }
 
-.kopWinkels p:nth-of-type(1) {
-    display: flex;
-    justify-content: center;
-
-    font-weight: 100;
-    text-align: center;
-    font-size: 1.5em;
-    margin: 1.3em;
-}
-
+.kopWinkels p:nth-of-type(1),
 .kopWinkels p:nth-of-type(2) {
     display: flex;
     justify-content: center;
 
-    font-weight: 100;
     text-align: center;
     font-size: 1.5em;
     margin: 1.3em;
+}
+
+.winkels h3 {
+    font-size: 1.5em;
+    word-spacing: -0.1em;
+    margin-left: 1.1em;
+    margin-bottom: -0.5em;
+    text-align: left;
+}
+
+.winkels p {
+    text-align: left;
+    margin-left: 1.2em;
+    margin-bottom: -1em;
+    margin-top: -0.3em;
+
+}
+
+.winkels a {
+    margin-left: 1.8em;
+    margin-right: 18em;
+    margin-bottom: 1em;
+
+    padding: 1.5em;
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+
+    background-color: black;
+    text-decoration: none;
+    font-size: 0.8em;
+    color: white;
+}
+
+
+
+.winkels img {
+    max-width: 100%;
+}
+
+
+.winkels a img {
+    max-width: 1em;
+    padding-left: 0.8em;
+
 }
 
 .nijmegenWinkel {
@@ -229,258 +332,59 @@ header li :nth-child(1) {
     margin: 1.8em;
     display: grid;
     gap: 2em;
-  
-    
-}
-
-.nijmegenWinkel img {
-    max-width: 100%;
-}
-
-
-.nijmegenWinkel p {
-    font-weight: 300;
-    font-size: 1.4em;
-    margin-left: 1em;
-    margin-bottom: -1em;
-    margin-top: -0.3em;
-
-}
-
-.nijmegenWinkel h3 {
-    font-weight: 900;
-    font-size: 1.5em;
-    word-spacing: -0.1em;
-    margin-left: 1em;
-    margin-bottom: -0.5em;
-}
-
-.nijmegenWinkel a {
-    margin-left: 1.8em;
-    margin-right: 18em;
-    margin-bottom: 1em;
-    
-    padding: 1.5em;
-    padding-top: 0.8em;
-    padding-bottom: 0.8em;
-
-    background-color: black;
-    text-decoration: none;
-    font-weight: 900;
-    font-size: 0.8em;
-    color: white;
 }
 
 .denhaagWinkel {
     background-color: #31F869;
     margin: 1.8em;
     display: grid;
-    gap: 2em; 
-}
-
-.denhaagWinkel img {
-    max-width: 100%;
-}
-
-.denhaagWinkel p {
-    font-weight: 300;
-    font-size: 1.4em;
-    margin-left: 1em;
-    margin-bottom: -1em;
-    margin-top: -0.3em;
-}
-
-.denhaagWinkel h3 {
-    font-weight: 900;
-    font-size: 1.5em;
-    word-spacing: -0.1em;
-    margin-left: 1em;
-    margin-bottom: -0.5em;
-}
-
-.denhaagWinkel a {
-    margin-left: 1.8em;
-    margin-right: 18em;
-    margin-bottom: 1em;
-    
-    padding: 1.5em;
-    padding-top: 0.8em;
-    padding-bottom: 0.8em;
-
-    background-color: black;
-    text-decoration: none;
-    font-weight: 900;
-    font-size: 0.8em;
-    color: white;
+    gap: 2em;
 }
 
 .utrechtWinkel {
     background-color: #E8D86A;
     margin: 1.8em;
     display: grid;
-    gap: 2em; 
+    gap: 2em;
 }
 
-.utrechtWinkel img {
-    max-width: 100%;
-}
 
-.utrechtWinkel p {
-    font-weight: 300;
-    font-size: 1.4em;
-    margin-left: 1em;
-    margin-bottom: -1em;
-    margin-top: -0.3em;
-}
-
-.utrechtWinkel h3 {
-    font-weight: 900;
-    font-size: 1.5em;
-    word-spacing: -0.1em;
-    margin-left: 1em;
-    margin-bottom: -0.5em; 
-}
-
-.utrechtWinkel a {
-    margin-left: 1.8em;
-    margin-right: 18em;
-    margin-bottom: 1em;
-    
-    padding: 1.5em;
-    padding-top: 0.8em;
-    padding-bottom: 0.8em;
-
-    background-color: black;
-    text-decoration: none;
-    font-weight: 900;
-    font-size: 0.8em;
-    color: white;
-}
-
-.tilburgWinkel{
+.tilburgWinkel {
     background-color: #F9E7F0;
     margin: 1.8em;
     display: grid;
-    gap: 2em;   
-}
-
-.tilburgWinkel img {
-    max-width: 100%;
-}
-
-.tilburgWinkel p {
-    font-weight: 300;
-    font-size: 1.4em;
-    margin-left: 1em;
-    margin-bottom: -1em;
-    margin-top: -0.3em;
-}
-
-.tilburgWinkel h3 {
-    font-weight: 900;
-    font-size: 1.5em;
-    word-spacing: -0.1em;
-    margin-left: 1em;
-    margin-bottom: -0.5em; 
-}
-
-.tilburgWinkel a {
-    margin-left: 1.8em;
-    margin-right: 18em;
-    margin-bottom: 1em;
-    
-    padding: 1.5em;
-    padding-top: 0.8em;
-    padding-bottom: 0.8em;
-
-    background-color: black;
-    text-decoration: none;
-    font-weight: 900;
-    font-size: 0.8em;
-    color: white;
+    gap: 2em;
 }
 
 .bredaWinkel {
     background-color: #B0FEE6;
     margin: 1.8em;
     display: grid;
-    gap: 2em;  
+    gap: 2em;
 }
-
-.bredaWinkel img {
-    max-width: 100%;
-}
-
-.bredaWinkel p {
-    font-weight: 300;
-    font-size: 1.4em;
-    margin-left: 1em;
-    margin-bottom: -1em;
-    margin-top: -0.3em;
-}
-
-.bredaWinkel h3 {
-    font-weight: 900;
-    font-size: 1.5em;
-    word-spacing: -0.1em;
-    margin-left: 1em;
-    margin-bottom: -0.5em; 
-}
-
-.bredaWinkel a {
-    margin-left: 1.8em;
-    margin-right: 18em;
-    margin-bottom: 1em;
-    
-    padding: 1.5em;
-    padding-top: 0.8em;
-    padding-bottom: 0.8em;
-
-    background-color: black;
-    text-decoration: none;
-    font-weight: 900;
-    font-size: 0.8em;
-    color: white;
-}
-
-
 
 .alleWinkels {
-    color: black;
-    background-color: #F7B100;
-    text-decoration: none;
-    padding: 0.9em;
-    font-weight: 900;
-    font-size: 0.8em ;
+    margin-left: 8em;
+    margin-right: 8em;
+    margin-bottom: 8em;
 
-    display: flex;
-    justify-content: center;
-    margin-left: 9em;
-    margin-right: 9em;
-    margin-top: 4em;
-    margin-bottom: 9em;
 
 }
 
-.formulier{
+.formulier {
     background-color: #F7F7F7;
 }
 
 .formulier h2 {
-    font-weight: 900;
-    font-size: 2em;
     word-spacing: -0.1em;
     margin-left: 1.3em;
     margin-right: 1.3em;
     padding-top: 3em;
     text-align: center;
-   
+
 }
 
 .formulier p {
-    font-weight: 300;
-    font-size: 1.2em;
-    text-align: center;
     margin: 1.8em;
     word-spacing: -0.06em;
 }
@@ -504,8 +408,6 @@ input {
     padding-right: 6em;
     padding-top: 1em;
     padding-bottom: 1em;
-    
-    font-weight: 300;
 }
 
 input::placeholder {
@@ -519,7 +421,7 @@ form button {
     background-color: #F7B100;
     text-decoration: none;
     font-weight: 900;
-    font-size: 1em ;
+    font-size: 1em;
 
     display: flex;
     justify-content: center;
@@ -547,10 +449,10 @@ footer {
 }
 
 footer h4 {
-font-weight: 900;
-font-size: 1.4em;
-margin-left: 1.3em;
-padding-top: 2em;
+    font-weight: 900;
+    font-size: 1.4em;
+    margin-left: 1.3em;
+    padding-top: 2em;
 }
 
 footer p {
@@ -558,6 +460,7 @@ footer p {
     margin-left: 1.8em;
     margin-top: 0.5em;
     margin-right: 1.3em;
+    text-align: left;
 }
 
 .socialLogo img {
@@ -568,19 +471,21 @@ footer p {
     margin-bottom: 1.5em;
 }
 
-.socialLogo img:nth-of-type(1){
+.socialLogo img:nth-of-type(1) {
     margin-left: 1.6em;
     margin-top: 0.5em;
 }
 
 footer a {
-  text-decoration: none;
-  color: black;
+    text-decoration: none;
+    color: black;
 
-  display: grid;
-  font-weight: 100;
-  margin-left: -0.5em;
-  margin-top: 0.5em;
+    display: grid;
+    justify-content: left;
+    font-weight: 100;
+    margin-left: -0.5em;
+    font-size: 1.3em;
+    padding: 0.3em;
 }
 
 .betaalLogo img {
@@ -591,24 +496,24 @@ footer a {
     margin-bottom: 0;
 }
 
-.betaalLogo img:nth-of-type(1){
+.betaalLogo img:nth-of-type(1) {
     margin-left: 1.9em;
     margin-top: 0.5em;
 }
 
-.betaalLogo img:nth-of-type(3){
+.betaalLogo img:nth-of-type(3) {
     padding-bottom: 1.3em;
 }
 
 
 footer img {
-    max-width: 40%;
+    width: 10em;
     margin-left: 1.9em;
     margin-top: 4em;
-    margin-bottom: 4.5em;
+    margin-bottom: 2em;
 }
 
-footer p:nth-of-type(5){
+footer p:nth-of-type(5) {
     background-color: black;
     color: white;
     font-size: 0.6em;
@@ -623,31 +528,26 @@ footer p:nth-of-type(5){
 .introWinkels h1 {
     color: black;
     margin-top: 7em;
-    font-weight: 900;
-    font-size: 1.8em;
     display: flex;
     justify-content: center;
 }
 
 .introWinkels p {
-    font-weight: 100;
-    font-size: 1.4em;
-    text-align: center;
     margin-left: 1.5em;
     margin-right: 1.5em;
+    text-align: center;
 }
 
-.introWinkels p:nth-of-type(1){
+.introWinkels p:nth-of-type(1) {
     margin-top: 2em;
     margin-bottom: 1em;
 }
 
-.introWinkels p:nth-of-type(2){
+.introWinkels p:nth-of-type(2) {
     margin-bottom: 5em;
 }
 
 .eventButton p {
-    font-weight: 300;
     font-size: 1.2em;
     display: flex;
     justify-content: center;
@@ -659,33 +559,22 @@ footer p:nth-of-type(5){
 }
 
 .eventButton a {
-    color: black;
-    background-color: #F7B100;
-    text-decoration: none;
-    padding: 0.9em;
-    font-weight: 900;
-    font-size: 0.8em ;
-
-    display: flex;
-    justify-content: center;
     margin-left: 9em;
     margin-right: 9em;
-    margin-bottom: 12em; 
+    margin-bottom: 12em;
+    background-color: #F7B100;
+    color: black;
 }
 
 .meerdanVintage h2 {
-    font-weight: 900;
     font-size: 1.8em;
     display: flex;
     justify-content: center;
     margin-left: 1.5em;
     margin-right: 1.5em;
-    text-align: center;
 }
 
 .meerdanVintage p {
-    text-align: center;
-    font-weight: 100;
     font-size: 1.5em;
     margin-left: 1.5em;
     margin-right: 1em;
@@ -694,32 +583,32 @@ footer p:nth-of-type(5){
 }
 
 .meerdanVintage a {
-    color: black;
-    background-color: #F7B100;
-    text-decoration: none;
-    padding: 0.9em;
-    font-weight: 900;
-    font-size: 0.8em ;
-
-    display: flex;
-    justify-content: center;
     margin-left: 11em;
     margin-right: 11em;
     margin-bottom: 2em;
 }
 
-.meerdanVintage a:nth-of-type(4){
-    color: black;
-    background-color: #F7B100;
-    text-decoration: none;
-    padding: 0.9em;
-    font-weight: 900;
-    font-size: 0.8em ;
-
-    display: flex;
-    justify-content: center;
-    margin-left: 12em;
-    margin-right: 12em;
-    margin-bottom: 12em;
+.meerdanVintage a:nth-of-type(4) {
+    margin: 0 12em 12em 12em;
 }
 
+.kop2Home div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-row-gap: 1em;
+    margin-left: 2.8em;
+    margin-top: 3em;
+}
+
+div img:nth-of-type(1){
+    grid-column: 1 / 3 ;
+    grid-row: 1;
+}
+div img:nth-of-type(2){
+    grid-column: 1 / 4;
+    grid-row: 2;
+}
+div img:nth-of-type(3){
+    grid-column: 1 / 3;
+    grid-row: 3;
+}
