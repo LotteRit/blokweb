@@ -99,7 +99,7 @@ section a img {
 }
 
 svg:hover {
-    fill: red;
+    fill: white;
 }
 
 section a {
@@ -149,7 +149,7 @@ header p {
 header nav {
     display: flex;
     flex-direction: column;
-    position: fixed;
+    position: sticky;
     top: 0;
     height: 10lvh;
     z-index: 1;
