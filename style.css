@@ -3,8 +3,7 @@
     font-family: "Gothic A1", sans-serif;
 }
 
-
-
+/* bron dlo opdracht: codepen states-kleurtjes met has en lightdark uitwerking*/
 :root {
 
     color-scheme: light dark;
@@ -13,39 +12,45 @@
     --achtergrondKleur2:#F7F7F7;
     --tekstKleur:black;
     --achtergrondKnop:#F7B100;
+    --input:white;
 
-    --achtergrondKleur:light-dark(white,#F7B100 );
-    --achtergrondKleur2:light-dark(#F7F7F7,black);
-    --tekstKleur:light-dark(black,white);
-    --achtergrondKnop:light-dark(#F7B100,white);
 }
 
 html:has([value="light"]:checked){
     color-scheme: light;
+    --achtergrondKleur2:white;
+    --achtergrondKnop:#F7B100;
+    --tekstKleur: black;
 }
 
 html:has([value="dark"]:checked){
     color-scheme: dark;
+    --achtergrondKleur2:#F7B100;
+    --achtergrondKnop: white;
+    --tekstKleur: white;
+    --input:white
 }
 
 *, *::before, *::after {
     box-sizing: border-box;
 }
 
+ input {
+    padding: 3em;
+
+}
 
 .checkBox form {
-    max-width: 20em;
-    display: grid;
-    background-color: var(--achtergrondKleur2)
+    display: flex;
+    justify-content: center;
+    background-color: var(--achtergrondKnop);
+    margin-top: -2em;
+    margin-bottom: 4em;
+    margin-left: 4em;
+    margin-right:4em ;
+    padding: 1em 1em;
     
 }
-
-.checkBox label {
-    display: flex;
-    align-items: center;
-    padding: 10em;
-}
-
 
 p {
     font-weight: 100;
@@ -70,7 +75,6 @@ h3 {
     color: var(--tekstKleur);
 }
 
-
 a {
     color: black;
     background-color: var(--achtergrondKnop);
@@ -92,14 +96,18 @@ a svg  {
 
 }
 
-
-
 section a img {
     width: 10%;
 }
 
-svg:hover {
+.icoon {
+    fill: black;
+    transition: transform 00ms, fill 00ms;
+}
+
+.icoon.geklikt {
     fill: white;
+    transform: scale(1.2);
 }
 
 section a {
@@ -108,8 +116,8 @@ section a {
     margin: 1rem 0;
 }
 
-/* Bron: Danny */
-
+/* Bron: Danny, wertke ooit staat nu uit */
+/* 
 .witteBalk {
     display: flex;
     align-items: center;
@@ -128,7 +136,7 @@ section a {
 
 .witteBalk img {
     width: 4em;
-}
+} */
 
 header p {
     display: grid;
@@ -139,7 +147,7 @@ header p {
     font-weight: 300;
     letter-spacing: -0.03em;
     margin-left: 0;
-    margin-right: 0;
+    margin-right: 5em;
 
     font-size: 1em;
     background-color: black;
@@ -149,7 +157,7 @@ header p {
 header nav {
     display: flex;
     flex-direction: column;
-    position: sticky;
+    position: fixed;
     top: 0;
     height: 10lvh;
     z-index: 1;
@@ -167,8 +175,6 @@ header ul {
 header li img:nth-child(1) {
     max-width: 6.5em;
     margin-left: -2.5em;
-  
-   
 }
 
 header li:nth-of-type(2){
@@ -187,9 +193,7 @@ header li:nth-of-type(4){
     padding-top: 1em;
 }
 
-
-
-
+/* hulp gehad van Danny en ali (studentassistent) */
 .headerBanner {
     background-image: url(https://www.kilokilovintage.nl/wp-content/uploads/2020/11/Header-team-tiny-scaled.jpg);
     background-size: cover;
@@ -199,7 +203,7 @@ header li:nth-of-type(4){
     justify-content: center;
     align-items: center;
 
-    margin-top: 2em;
+    margin-top: 8em;
 
 }
 
@@ -214,9 +218,12 @@ header li:nth-of-type(4){
     animation-name: carouselLogo;
     animation-duration:18s; 
     
+    background-color: white;
     animation-iteration-count: infinite;
     
 }
+
+/* bron danny voorbeeld in de les*/
 
 .carousel {
     display: flex;
@@ -248,8 +255,6 @@ header li:nth-of-type(4){
     100% {
         transform: translateX(-60em);
     }
-
-   
 }
 
 .carousel img {
@@ -303,6 +308,33 @@ header li:nth-of-type(4){
     text-align: left;
 
 }
+ 
+/* bron ali studentasistent*/ 
+
+.kop2Home div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-row-gap: 1em;
+    margin-left: 2.8em;
+    margin-top: 3em;
+}
+
+div img:nth-of-type(1)
+{
+    grid-column: 1 / 3 ;
+    grid-row: 1;
+}
+div img:nth-of-type(2)
+{
+    grid-column: 1 / 4;
+    grid-row: 2;
+}
+
+div img:nth-of-type(3)
+{
+    grid-column: 1 / 3;
+    grid-row: 3;
+}
 
 .kop3Home h2 {
     margin-top: 3em;
@@ -314,16 +346,27 @@ header li:nth-of-type(4){
 
 .kop3Home {
     margin-bottom: 2em;
+    margin-left: 0.7em;
 }
 
-.kop3Home a {
-    margin-left: 8em;
-    margin-right: 8em;
+.kop3Home p:nth-of-type(1) {
+    font-weight: 900;
+    font-size: 1em;
+    text-align: left;
+}
+
+.kop3Home p:nth-of-type(2){
+    color: #F7B100;
+    font-size: 1em;
+    font-weight: 700;
+    text-align: left;
+    margin-top: 0.5em;
 }
 
 .kop3Home img:nth-of-type(1) {
     max-width: 23em;
     display: flex;
+
 }
 
 .kop3Home img:nth-of-type(2) {
@@ -361,7 +404,6 @@ header li:nth-of-type(4){
 
 .kopWinkels h2 {
     padding-top: 1.5em;
-
     display: flex;
     justify-content: center;
 }
@@ -401,18 +443,16 @@ header li:nth-of-type(4){
     padding-top: 0.8em;
     padding-bottom: 0.8em;
 
-    background-color: var(--tekstKleur);
     text-decoration: none;
     font-size: 0.8em;
     color: var(--achtergrondKleur);
+    background-color: black;
+    
 }
-
-
 
 .winkels img {
     max-width: 100%;
 }
-
 
 .winkels a img {
     max-width: 1em;
@@ -441,7 +481,6 @@ header li:nth-of-type(4){
     gap: 2em;
 }
 
-
 .tilburgWinkel {
     background-color: #F9E7F0;
     margin: 1.2em;
@@ -460,8 +499,6 @@ header li:nth-of-type(4){
     margin-left: 8em;
     margin-right: 8em;
     margin-bottom: 8em;
-
-
 }
 
 .formulier {
@@ -474,12 +511,15 @@ header li:nth-of-type(4){
     margin-right: 1.3em;
     padding-top: 3em;
     text-align: center;
+    color: black;
 
 }
 
 .formulier p {
     margin: 1.8em;
     word-spacing: -0.06em;
+    color: black;
+    
 }
 
 form {
@@ -494,6 +534,8 @@ form {
     margin-bottom: 8em;
     margin-top: 3em;
     gap: 1em;
+    background-color: black;
+    
 }
 
 input {
@@ -506,8 +548,6 @@ input {
 input::placeholder {
     color: black;
 }
-
-
 
 form button {
     color: black;
@@ -561,12 +601,8 @@ https://www.w3schools.com/howto/howto_js_popup_form.asp*/
     margin-left: 4.8em;
 }
 
-
-
-
-
 /* https://www.a11yproject.com/posts/how-to-hide-content/ */
-label {
+.formulier label {
     clip: rect(0 0 0 0);
     clip-path: inset(50%);
     height: 1px;
@@ -585,6 +621,8 @@ footer h4 {
     font-size: 1.4em;
     margin-left: 1.3em;
     padding-top: 2em;
+    color: var(--tekstKleur);
+    color: black;
 }
 
 footer p {
@@ -593,19 +631,40 @@ footer p {
     margin-top: 0.5em;
     margin-right: 1.3em;
     text-align: left;
+    color: black;
+}
+
+footer li {
+    list-style-type: none;
 }
 
 .socialLogo img {
-    max-width: 6%;
+    max-width: 2em;
     padding: 0.3em;
     margin-top: 0;
     margin-left: 0;
-    margin-bottom: 1.5em;
+    margin-bottom: -0.5em;
 }
 
 .socialLogo img:nth-of-type(1) {
     margin-left: 1.6em;
     margin-top: 0.5em;
+}
+
+.onderkantFooter img {
+    padding-top: 2em;
+    max-width: 8em;
+}
+
+.onderkantFooter p {
+    background-color: black;
+    color: white;
+    font-size: 0.7em;
+    display: flex;
+    justify-content: center;
+    margin: 2em 0em;
+    padding-top: 1em;
+    padding-bottom: 1em;
 }
 
 footer a {
@@ -658,7 +717,7 @@ footer p:nth-of-type(5) {
 }
 
 .introWinkels h1 {
-    margin-top: 4em;
+    margin-top: 6em;
     display: flex;
     justify-content: center;
 }
@@ -723,33 +782,6 @@ footer p:nth-of-type(5) {
     margin: 0 12em 12em 12em;
 }
 
-.kop2Home div {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-row-gap: 1em;
-    margin-left: 2.8em;
-    margin-top: 3em;
-}
-
-div img:nth-of-type(1)
-{
-    grid-column: 1 / 3 ;
-    grid-row: 1;
-}
-div img:nth-of-type(2)
-{
-    grid-column: 1 / 4;
-    grid-row: 2;
-}
-
-div img:nth-of-type(3)
-{
-    grid-column: 1 / 3;
-    grid-row: 3;
-}
-
-
-
 /* Bron: Danny */
 .visible {
     animation-name: fadeIn;
@@ -768,9 +800,11 @@ div img:nth-of-type(3)
     }
 }
 
+/* bron dlo opdracht pen code js-3-stap- oefening 3-uitwerking wishlist*/
 .wishlist {
-    padding-top: 3em;
     background-color: var(--achtergrondKnop);
+    list-style-type: none;
+    margin-left: -2.5em;
 }
 
 .wishlist li{
@@ -781,21 +815,8 @@ div img:nth-of-type(3)
 }
 
 li.liked button.like {  
-  background-color:white;
-  color:crimson;
-  font-size:1.5em;
-}
-
-.like {
-   color: black;
-}
-
-.wishlist li:nth-of-type(3){
-    padding-bottom: 7em;
-}
-
-.wishlist li button {
-    grid-column-start:2;
+  color:red;
+  grid-column-start:2;
   grid-row:1/3;
   justify-self:end;
   align-self:start;
@@ -808,4 +829,69 @@ li.liked button.like {
   
   background-color: var(--achtergrondKnop);
   border-width: 0;
+}
+
+.like {
+   color: black;
+}
+
+.wishlist li:nth-of-type(3){
+    padding-bottom: 7em;
+}
+
+.wishlist li button {
+grid-column-start:2;
+  grid-row:1/3;
+  justify-self:end;
+  align-self:start;
+  aspect-ratio:1/1;  
+  
+  padding: 0.5em 1em;
+  position: absolute;
+  margin-left: 1em;
+  margin-top: 1em;
+  
+  background-color: var(--achtergrondKnop);
+  border-width: 0;
+}
+
+.uitgelichtShirt {
+    background-color: var(--achtergrondKnop);
+    padding-top: 3em;
+}
+
+/* danny voorbeeld in de les*/
+
+.hergebruik  {
+    justify-content: center;
+    margin-left: 0.5em;
+    margin-top: 5em;
+}
+
+.hergebruik p {
+    margin-top: 1em;
+}
+
+.hergebruik svg {
+    margin-left: 8.5em;
+    margin-top: 3em;
+    margin-bottom: 3em;
+    stroke: lightgreen;
+    fill: none;
+    max-width: 8em;
+
+    animation-name: rondje;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rondje {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }

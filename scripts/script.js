@@ -57,111 +57,38 @@ function closePopup() {
     document.getElementById("overlay").style.display = "none";
 }
 
+/* Stap: 1;Hier komt een nodelist uit aka featuring lijstje van alle like buttons */
+var hartjes = document.querySelectorAll(".like");
 
-let hartje = document.querySelectorAll(".like");
+/* Stap 2: Dan moet je daar eerst overheen foreachen */
+hartjes.forEach(hartje => {
+    hartje.addEventListener('click', addToFavorites);
+})
 
-hartje.addEventListener("click", addToFavorites);
-
+/* De rest aka featuring; class toevoegen */
 
 function addToFavorites(){
+    console.log('Hartje geklikt!');
+
     let shirt = hartje.closest("li");
 
     shirt.classList.toggle("liked")
 }
 
-// let wishtlistLike = document.querySelectorAll("button.like");
+let icoontjes = document.querySelectorAll(".icoon")
 
-// for (let i = 0; i <wishtlistLike.length; i++) {
-//     wishtlistLike[i].onclick = addToFavorites;
-// }
+icoontjes.forEach(icoontje =>{
+    icoontje.addEventListener("click", gekliktIcoon); 
+      
+})
 
-// function addToFavorites(event){
-//     let geklikt = event.target;
-//     let shirts = geklikHart.closest("li");
-//     gekliktHart.classList.toggle("liked");
-// }
+function gekliktIcoon(){
 
-// function openPopup(){
-//     document.getElementById("popup").style.display = "block";
-//     document.getElementById("overlay").style.display = "block";
-
-// }
-
-// function cloesePopUp(){
-//     document.getElementById("popup").style.display = "none";
-//     document.getElementById("overlay").style.display = "none";
-// }
-
-// function openPopUp(){
-//     document.getElementById(".myPopUp").style.display = 
-//     "block";
-// }
-
-// function cloesePopUp(){
-//     document.getElementById(".myPopUp").style.display = 
-//     "none";
-// }
+    this.classList.toggle("geklikt");
+}
 
 
 
-// let imgkl1 = document.querySelector("div:nth-of-type(1)");
-// let imgkl2 = document.querySelector("div:nth-of-type(2");
-
-// imgkl1.addEventListener("click",veranderimg);
-
-// function veranderimg(){
-//     imgkl1.classList.toggle
-// }
-
-// let imgkl1 = document.querySelector('div:nth-of-type(1)')
-// let imgkl2 = document.querySelector('div:nth-of-type(2)')
-// let imgkl3 = document.querySelector('div:nth-of-type(3)')
-
-// imgkl1.addEventListener('click', veranderimg);
-// imgkl2.addEventListener('click', veranderimg2);
-// imgkl3.addEventListener('click', veranderimg3);
-
-
-
-// function veranderimg(){
-// imgkl1.classList.toggle
-// }
-
-// function veranderimg2(){
-//     imgkl2.classList.toggle
-// }
-
-// function veranderimg3(){
-//     imgkl3.classList.toggle
-// }
-
-
-// let img1 = document.querySelector(".imgkl1");
-// let img2 = document.querySelector(".imgkl2");
-// let img3 = document.querySelector(".imgkl3");
-
-
-// let images = [
-//     "/images/monthlyMood12.jpg",
-//     "/images/monthlyMood22.jpg",
-//     "/images/monthlyMood32.jpg" 
-// ]
-
-
-// function veranderImg(){
-//     let index = Math.floor(Math.random() * images.length )
-//     let randomUrl1 = images[index + 1]
-//     let randomUrl2 = images[index]
-//     let randomUrl3 = images[index - 1]
-
-//     img1.src = randomUrl1
-//     img2.src = randomUrl2
-//     img3.src = randomUrl3
-// }
-
-// img1.addEventListener('click', veranderImg)
-// img2.addEventListener('click', veranderImg)
-// img3.addEventListener('click', veranderImg)
 
 
 
