@@ -3,12 +3,57 @@
     font-family: "Gothic A1", sans-serif;
 }
 
+
+
+:root {
+
+    color-scheme: light dark;
+
+    --achtergrondKleur:white;
+    --achtergrondKleur2:#F7F7F7;
+    --tekstKleur:black;
+    --achtergrondKnop:#F7B100;
+
+    --achtergrondKleur:light-dark(white,#F7B100 );
+    --achtergrondKleur2:light-dark(#F7F7F7,black);
+    --tekstKleur:light-dark(black,white);
+    --achtergrondKnop:light-dark(#F7B100,white);
+}
+
+html:has([value="light"]:checked){
+    color-scheme: light;
+}
+
+html:has([value="dark"]:checked){
+    color-scheme: dark;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+
+.checkBox form {
+    max-width: 20em;
+    display: grid;
+    background-color: var(--achtergrondKleur2)
+    
+}
+
+.checkBox label {
+    display: flex;
+    align-items: center;
+    padding: 10em;
+}
+
+
 p {
     font-weight: 100;
     font-size: 1.3em;
     margin-left: 1.3em;
     margin-right: 1.3em;
     text-align: center;
+    color: var(--tekstKleur);
 
 }
 
@@ -22,32 +67,39 @@ h3 {
     font-weight: 900;
     font-size: 2em;
     text-align: center;
+    color: var(--tekstKleur);
 }
 
 
 a {
     color: black;
-    background-color: #F7B100;
+    background-color: var(--achtergrondKnop);
     text-decoration: none;
-    padding: 0.9em;
+    padding: 1em 1em 1em 1em ;
     font-weight: 900;
     font-size: 0.8em;
 
-
     display: flex;
     justify-content: center;
+}
+
+nav a {
+    background: none;
+}
+
+a svg  {
+    padding-left: 0.4em;
 
 }
 
-a img {
-    max-width: 1em;
-    padding-left: 0.8em;
 
-
-}
 
 section a img {
     width: 10%;
+}
+
+svg:hover {
+    fill: red;
 }
 
 section a {
@@ -56,6 +108,27 @@ section a {
     margin: 1rem 0;
 }
 
+/* Bron: Danny */
+
+.witteBalk {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+
+    background-color: var(--achtergrondKleur);
+    height: 5vh;
+}
+
+.witteBalk a {
+    background-color: var(--achtergrondKleur);
+    font-weight: 100;
+    font-size: 1em;
+}
+
+.witteBalk img {
+    width: 4em;
+}
 
 header p {
     display: grid;
@@ -63,11 +136,8 @@ header p {
     grid-template-rows: 0.5fr 0.5fr;
     padding-top: 0.7em;
 
-
-
     font-weight: 300;
     letter-spacing: -0.03em;
-    text-align: center;
     margin-left: 0;
     margin-right: 0;
 
@@ -82,26 +152,42 @@ header nav {
     position: fixed;
     top: 0;
     height: 10lvh;
-
+    z-index: 1;
 }
 
 header ul {
     list-style-type: none;
-    margin-left: -2.5em;
-
-    display: grid;
-    grid-template-columns: 1fr 3fr 1fr 1fr;
-    grid-template-rows: 0.2fr 0.2fr;
-
-    background-color: #F7B100;
+    display: flex;
+    padding-right: 7em;
+    
+    background-color: var(--achtergrondKnop)
+   
 }
 
-header li :nth-child(1) {
+header li img:nth-child(1) {
     max-width: 6.5em;
-    padding-left: 1em;
-    padding-bottom: 0;
-
+    margin-left: -2.5em;
+  
+   
 }
+
+header li:nth-of-type(2){
+    padding-left: 8em;
+    padding-top: 1em;
+    margin-right: -3em;
+}
+
+header li:nth-of-type(3){
+    margin-left: 1em;
+    margin-top: 0.5em;
+    margin-right: -1.5em;
+}
+
+header li:nth-of-type(4){
+    padding-top: 1em;
+}
+
+
 
 
 .headerBanner {
@@ -113,7 +199,7 @@ header li :nth-child(1) {
     justify-content: center;
     align-items: center;
 
-    margin-top: 8em;
+    margin-top: 2em;
 
 }
 
@@ -124,15 +210,50 @@ header li :nth-child(1) {
 
 }
 
+.carousel img {
+    animation-name: carouselLogo;
+    animation-duration:18s; 
+    
+    animation-iteration-count: infinite;
+    
+}
+
 .carousel {
     display: flex;
     align-items: center;
-    overflow: auto;
+    overflow: hidden;
+}
 
+@keyframes carouselLogo {
+    0% {
+        transform: translateX(0em);
+    }
+
+    20% {
+        transform: translateX(-12em);
+    }
+
+    40% {
+        transform: translateX(-24em);
+    }
+
+    60% {
+        transform: translateX(-36em);
+    }
+
+    80% {
+        transform: translateX(-48em);
+    }
+
+    100% {
+        transform: translateX(-60em);
+    }
+
+   
 }
 
 .carousel img {
-    width: 9em;
+    width: 12em;
     padding: 1.5em;
     padding-bottom: 1em;
     padding-top: 1em;
@@ -151,7 +272,7 @@ header li :nth-child(1) {
 }
 
 .kop1Home {
-    background-color: #F7F7F7;
+    background-color: var(--achtergrondKleur2);
     padding-left: 1.3em;
     padding-right: 1.3em;
 
@@ -164,7 +285,7 @@ header li :nth-child(1) {
     line-height: 1.5;
     margin-bottom: 1em;
     font-size: 1.3em;
-    background-color: #F7F7F7;
+    background-color: var(--achtergrondKleur2);
 }
 
 .kop1Home a {
@@ -172,9 +293,9 @@ header li :nth-child(1) {
     display: flex;
     justify-content: center;
     text-decoration: none;
-    color: black;
-    background-color: #F7F7F7;
+    background-color: var(--achtergrondKleur2);
 }
+
 
 .kop2Home h2 {
     margin-top: 1em;
@@ -182,15 +303,6 @@ header li :nth-child(1) {
     text-align: left;
 
 }
-
-/* .kop2Home img {
-    display: grid;
-
-    max-width: 20%;
-    margin-left: 2em;
-    margin-top: 3em;
-    padding: 0;
-} */
 
 .kop3Home h2 {
     margin-top: 3em;
@@ -209,37 +321,19 @@ header li :nth-child(1) {
     margin-right: 8em;
 }
 
-.hidden {
-    opacity: 0;
-}
-
-
 .kop3Home img:nth-of-type(1) {
     max-width: 23em;
     display: flex;
-
 }
 
 .kop3Home img:nth-of-type(2) {
     max-width: 23em;
     margin-top: -23em;
-}
-
-.kop3Home img:nth-of-type(1),
-.kop3Home img:nth-of-type(2) {
     opacity: 0;
-    transition: .5s ease;
 }
-
-.kop3Home img:nth-of-type(1),
-.kop3Home img:nth-of-type(2) :hover {
-    opacity: 1;
-
-}
-
 
 .kop4Events {
-    background-color: #F7F7F7;
+    background-color: var(--achtergrondKleur2);
     padding-bottom: 3em;
 
 }
@@ -259,10 +353,9 @@ header li :nth-child(1) {
 }
 
 .kop4Events a {
-    margin-left: 9em;
-    margin-right: 9em;
-    margin-top: 4em;
-    margin-bottom: 9em;
+    margin: 8em 8em;
+    margin-bottom: 2em;
+    margin-top: 5em;
 }
 
 
@@ -308,10 +401,10 @@ header li :nth-child(1) {
     padding-top: 0.8em;
     padding-bottom: 0.8em;
 
-    background-color: black;
+    background-color: var(--tekstKleur);
     text-decoration: none;
     font-size: 0.8em;
-    color: white;
+    color: var(--achtergrondKleur);
 }
 
 
@@ -329,21 +422,21 @@ header li :nth-child(1) {
 
 .nijmegenWinkel {
     background-color: #CEC5F1;
-    margin: 1.8em;
+    margin: 1.2em;
     display: grid;
     gap: 2em;
 }
 
 .denhaagWinkel {
     background-color: #31F869;
-    margin: 1.8em;
+    margin: 1.2em;
     display: grid;
     gap: 2em;
 }
 
 .utrechtWinkel {
     background-color: #E8D86A;
-    margin: 1.8em;
+    margin: 1.2em;
     display: grid;
     gap: 2em;
 }
@@ -351,14 +444,14 @@ header li :nth-child(1) {
 
 .tilburgWinkel {
     background-color: #F9E7F0;
-    margin: 1.8em;
+    margin: 1.2em;
     display: grid;
     gap: 2em;
 }
 
 .bredaWinkel {
     background-color: #B0FEE6;
-    margin: 1.8em;
+    margin: 1.2em;
     display: grid;
     gap: 2em;
 }
@@ -391,7 +484,7 @@ header li :nth-child(1) {
 
 form {
     display: grid;
-    background-color: black;
+    background-color: var(--tekstKleur);
     padding-top: 1.5em;
     padding-bottom: 2em;
     padding-left: 2em;
@@ -418,7 +511,7 @@ input::placeholder {
 
 form button {
     color: black;
-    background-color: #F7B100;
+    background-color: var(--achtergrondKnop);
     text-decoration: none;
     font-weight: 900;
     font-size: 1em;
@@ -430,6 +523,45 @@ form button {
     padding-bottom: 1em;
     border-style: none;
 }
+
+
+/* https://chatgpt.com/c/66f59f6f-e034-8012-9cdc-fe5267bc7cd3
+https://www.w3schools.com/howto/howto_js_popup_form.asp*/
+
+#popup {
+    display: none;
+    position: fixed;
+    top: 30%;
+    left: 10%;
+    bottom: 50%;
+    width: 20em;
+    height: 20em;
+    padding: 2em;
+    background-color: white;
+}
+
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    
+}
+
+.close-btn {
+    background-color: #F7B100;
+    color: black;
+    border: none;
+    padding: 1em 3em;
+    display: block;
+    font-weight: 900;
+    margin-left: 4.8em;
+}
+
+
 
 
 
@@ -445,7 +577,7 @@ label {
 }
 
 footer {
-    background-color: #F7B100;
+    background-color: var(--achtergrondKnop);
 }
 
 footer h4 {
@@ -516,7 +648,7 @@ footer img {
 footer p:nth-of-type(5) {
     background-color: black;
     color: white;
-    font-size: 0.6em;
+    font-size: 0.8em;
     margin: 0;
 
     display: flex;
@@ -526,8 +658,7 @@ footer p:nth-of-type(5) {
 }
 
 .introWinkels h1 {
-    color: black;
-    margin-top: 7em;
+    margin-top: 4em;
     display: flex;
     justify-content: center;
 }
@@ -562,8 +693,8 @@ footer p:nth-of-type(5) {
     margin-left: 9em;
     margin-right: 9em;
     margin-bottom: 12em;
-    background-color: #F7B100;
-    color: black;
+    background-color: var(--achtergrondKnop);
+    color: var(--tekstKleur);
 }
 
 .meerdanVintage h2 {
@@ -600,15 +731,81 @@ footer p:nth-of-type(5) {
     margin-top: 3em;
 }
 
-div img:nth-of-type(1){
+div img:nth-of-type(1)
+{
     grid-column: 1 / 3 ;
     grid-row: 1;
 }
-div img:nth-of-type(2){
+div img:nth-of-type(2)
+{
     grid-column: 1 / 4;
     grid-row: 2;
 }
-div img:nth-of-type(3){
+
+div img:nth-of-type(3)
+{
     grid-column: 1 / 3;
     grid-row: 3;
+}
+
+
+
+/* Bron: Danny */
+.visible {
+    animation-name: fadeIn;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards; 
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.wishlist {
+    padding-top: 3em;
+    background-color: var(--achtergrondKnop);
+}
+
+.wishlist li{
+    margin-top: 3em;
+    padding: 0em 2em;
+    list-style-type: none;
+    display: flex;
+}
+
+li.liked button.like {  
+  background-color:white;
+  color:crimson;
+  font-size:1.5em;
+}
+
+.like {
+   color: black;
+}
+
+.wishlist li:nth-of-type(3){
+    padding-bottom: 7em;
+}
+
+.wishlist li button {
+    grid-column-start:2;
+  grid-row:1/3;
+  justify-self:end;
+  align-self:start;
+  aspect-ratio:1/1;  
+  
+  padding: 0.5em 1em;
+  position: absolute;
+  margin-left: 1em;
+  margin-top: 1em;
+  
+  background-color: var(--achtergrondKnop);
+  border-width: 0;
 }
